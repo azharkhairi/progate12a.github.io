@@ -253,6 +253,9 @@ nav :checked ~ .icon-burger .line:nth-child(2) {
         height: auto;
         margin-bottom: 20px;
     }
+figcaption{
+    font-size: 10px;
+}
 }
 
 /*responsive tablet*/
