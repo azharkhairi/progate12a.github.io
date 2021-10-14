@@ -5,3 +5,5 @@ Daftar anggota kelompok 12-A :
 3. Muhammad Basyir
 4. M. Bayu Ramdani
 5. Muhammad Rizki Pratama
+
+Untuk properti animation diterapkan pada about us masing" anggota 
