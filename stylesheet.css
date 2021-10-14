@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*navigasi (header)*/
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 5%;
+    height: 100px;
+    background-color: #192965;
+}
+nav .header-logo {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    float: left;
+    color: #fff;
+    padding-top: 30px;
+}
+nav .links {
+    float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+}
+nav .links a:hover{
+    font-weight: lighter;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+
+/*pembuka*/
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.top-wrapper {
+    padding: 100px 0 100px 0;
+    background-image: url(https://imgx.sonora.id/crop/0x0:0x0/700x465/photo/2019/12/14/3995294203.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  .top-wrapper h1 {
+    opacity: 0.9;
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .top-wrapper p {
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+
+  /*isi konten*/
+.card  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) ;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.featured-image {
+    width: 70%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#content{
+    padding: 20px;
+}
+main {
+    overflow: auto; 
+}
+.menu-icon {
+    color: white;
+    float: right;
+    font-size: 25px;
+    padding: 21px 0;
+    display: none;
+  }
+
+/*About Us*/
+.about-us{
+    display: flex;
+    flex-direction: row;
+}
+.wrapper-img{
+    box-shadow: 0 5px 15px gray;
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.wrapper-img:hover{
+    background-color: #192965;
+    color: #fff;
+    font-weight: bold;
+    animation: animasiAbout 2s ease infinite alternate;
+    box-shadow: 0 0 10px rgb(170, 204, 248),
+                0 0 20px rgb(170, 204, 248),
+                0 0 30px rgb(170, 204, 248),
+                0 0 0 75px rgba(255,255,255,0.05),
+                0 0 0 60px rgba(255,255,255,0.05),
+                0 0 0 45px rgba(255,255,255,0.05),
+                0 0 0 30px rgba(255,255,255,0.05),
+                0 0 0 15px rgba(255,255,255,0.05)
+                ;
+}
+.title{
+    font-size: 12px;
+    text-align: center;
+}
+.title2{
+    font-size: 10px;
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    color: #192965;
+    font-style: italic;
+    font-size: 13px;
+}
+.wrapper-img img{
+    width:50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}
+
+/*Animasi About Us*/
+@keyframes animasiAbout{
+    from{
+        width: 250px;
+        height: 200px; 
+    }
+    
+    to{
+        width: 280px;
+        height: 230px;
+    }
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    color: white;
+    background-color: #192965;
+}
+
+/*Web Responsive SmartPhone*/
+@media (max-width: 670px) {
+nav .header-logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+nav .links a {
+		font-size: 20px;
+	}
+nav :checked ~ .links {
+		bottom: 0;
+	}
+nav .icon-burger {
+		display: block;
+	}
+nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+.about-us{
+        display: flex;
+        flex-direction: column;
+    }
+.wrapper-img{
+        display: block;
+        margin: auto;
+        width: 40%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/*responsive tablet*/
+@media (max-width: 1000px){
+    .about-us{
+        display: flex;
+        flex-direction: column;
+    }
+.wrapper-img{
+        display: block;
+        margin: auto;
+        width: 50%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
